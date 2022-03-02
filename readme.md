@@ -13,7 +13,7 @@ Quy trình phát triển repository:
 - Tạo repository ở branch master.
 - Tạo branch develop để bắt đầu code. Nếu chia project thành nhiều tính năng, tạo thêm các branch feature. Với các project đơn giản thì không bắt buộc.
 - Nếu sử dụng các branch feature, dùng các branch này để code các tính năng. Khi một tính năng hoàn tất, merge branch feature vào develop.
-- Khi code trong branch develop đủ tiêu chuẩn để tạo một phiên bản chính thức, merge branch master vào release để thử nghiệm với môi trường production. Nếu khi thử nghiệm phát hiện bug, tạo các commit để debug ngay trên branch này. Lưu ý, việc debug trong branch này vẫn phải đảm bào chất lượng code.
+- Khi code trong branch develop đủ tiêu chuẩn để tạo một phiên bản chính thức, merge branch develop vào release để thử nghiệm với môi trường production. Nếu khi thử nghiệm phát hiện bug, tạo các commit để debug ngay trên branch này. Lưu ý, việc debug trong branch này vẫn phải đảm bào chất lượng code.
 - Sau khi code trong release đã hoạt động ổn định, merge release vào branch master. Nếu đã xảy ra hoạt động sửa lỗi, merge vào branch develop để cập nhật các đoạn code sửa lỗi.
 - Sau khi đã chạy production trên branch master mà xảy ra lỗi, merge brnach master vào branch hotfixes để debug. Việc debug này phải đảm bảo nhanh để đưa code hoạt động trở lại nên đôi khi có thể không cần đảm bảo chất lượng code đúng chuẩn, sạch đẹp. Sau khi sửa xong bug, merge branch này vào branch master để code hoạt động trở lại. Nếu code fix bug vẫn đảm bảo chất lượng, có thể merge branch này vào branch develop để cập nhật code sửa lỗi.
 

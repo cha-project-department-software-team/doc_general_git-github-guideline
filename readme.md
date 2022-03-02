@@ -9,6 +9,7 @@ Các branch chính:
 - Các branch feature: các branch tạo ra để phát triển tính năng riêng mà không sợ ảnh hưởng đến code chính hoặc để code song song nhiều tính năng khi code nhóm. Cú pháp đặt tên: feature-tên-tính-năng. Sau khi tính năng hoàn tất, chuyển code về branch chính thông qua lệnh merge.
 - hotfixes: nếu branch master xảy ra bug khi chạy chính thức, dùng branch hotfixes để sửa lỗi đó. Sau khi sửa lỗi, merge code trong hotfixes về master. Nếu hotfixes đạt tiêu chuẩn code của project, có thể merge code trong hotfixes vào develop.
 - release: branch này dùng để test project trong môi trường production trước khi merge vào master. Khi xảy ra bug, tiếp tục fix trong branch này rồi merge vào master và develop.
+
 Quy trình phát triển repository:
 - Tạo repository ở branch master.
 - Tạo branch develop để bắt đầu code. Nếu chia project thành nhiều tính năng, tạo thêm các branch feature. Với các project đơn giản thì không bắt buộc.
